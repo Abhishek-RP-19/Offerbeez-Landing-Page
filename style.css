@@ -1,0 +1,170 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* General */
+*{margin:0;padding:0;box-sizing:border-box}
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(135deg, #f9f9f9, #e6f0ff);
+}
+
+
+.container{width:90%;max-width:1200px;margin:auto}
+
+/* Header */
+/* Header */
+header{
+  background: linear-gradient(90deg, #161819, #0b1519, #132e39);
+
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:15px 0
+}
+.logo img{height:50px;width:auto;display:block}
+nav ul{list-style:none;display:flex;gap:25px}
+nav ul li a{
+  text-decoration:none;font-weight:500;color:#fff;position:relative;
+  padding-bottom:5px;transition:color .3s
+}
+nav ul li a::after{
+  content:"";position:absolute;left:0;bottom:0;width:0;height:2px;
+  background:#ffd43b;transition:width .3s
+}
+nav ul li a:hover{color:#ffd43b}
+nav ul li a:hover::after{width:100%}
+
+/* Hero */
+.hero{
+  background:linear-gradient(135deg,rgba(0,119,255,.85),rgba(255,75,110,.85)),
+             url("https://www.transparenttextures.com/patterns/triangles.png");
+  background-size:cover;color:#fff;padding:120px 20px;text-align:center;
+  position:relative;overflow:hidden
+}
+
+
+
+.hero-title{
+  display:inline-flex;              
+  align-items:center;            
+  justify-content:center;
+  gap:12px;                          
+  font-size:52px;                    
+  font-weight:700;
+  line-height:1.1;                 
+  margin-bottom:20px
+}
+.hero-title span{display:block}
+.hero-logo{
+  height:.99em;                     
+  width:auto;
+  flex:0 0 auto;
+  padding-bottom: 3px;
+  image-rendering:auto
+}
+.hero p{max-width:650px;margin:0 auto 30px;font-size:18px;opacity:.95}
+.btn{
+  display:inline-block;padding:12px 25px;background:#ffd43b;color:#111;
+  border-radius:30px;font-weight:600;transition:all .3s
+}
+.btn:hover{background:#fff;color:#111;box-shadow:0 4px 10px rgba(0,0,0,.15)}
+.wave{
+  position:absolute;bottom:-1px;left:0;width:100%;height:80px;
+  background:url("data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDQwIDIwMCI+PHBhdGggZD0iTTAgMTAwbDEyMDAgMTAwTDE0NDAgMEgweiIvPjwvc3ZnPg==");
+  background-size:cover
+}
+
+/* About */
+.about{padding:70px 20px;background: linear-gradient( #dee4d1, #b6887b)}
+.about-flex{display:flex;align-items:center;gap:40px;flex-wrap:wrap}
+.about-text{flex:1}
+.about-text h2{font-size:32px;margin-bottom:15px;color:#3339b3}
+.about-text p{margin-bottom:12px;color:#555}
+.about-img{flex:1;text-align:center}
+.about-img img{max-width:350px;border-radius:12px}
+
+/* Partners */
+.partners {
+  padding: 70px 20px;
+  background: linear-gradient(135deg, #fdfbfb, #ebedee); 
+  text-align: center;
+}
+
+.partners h2{margin-bottom:30px;color:#2a5298;font-weight:600}
+.cards{display:flex;flex-wrap:wrap;justify-content:center;gap:25px}
+.card {
+  background: linear-gradient(135deg,  #dee4d1, #b6887b); 
+  padding: 25px;
+  border-radius: 15px;
+  width: 300px;
+  box-shadow: 0 6px 15px rgba(0,0,0,.1);
+  transition: transform .3s, box-shadow .3s;
+  text-align: center;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,.18);
+}
+
+.card img{width:60px;margin-bottom:15px}
+
+/* Contact */
+.contact{padding:70px 20px;background:linear-gradient(135deg,#1e3c72,#2a5298);color:#fff}
+.contact-flex{display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start}
+.contact-info{flex:1}
+.contact a{color:#ffd43b;font-weight:500}
+.contact-form{flex:1;display:flex;flex-direction:column;gap:15px}
+.contact-form input,.contact-form textarea{padding:12px;border:none;border-radius:8px}
+.contact-form button{align-self:flex-start}
+
+/* Footer */
+footer{background:#111;color:#eee;padding:50px 20px 20px}
+.footer-content{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;margin-bottom:20px
+}
+.footer-logo img{height:50px;margin-bottom:10px}
+.footer-links ul{list-style:none;padding:0}
+.footer-links ul li{margin-bottom:8px}
+.footer-links a{color:#eee;text-decoration:none}
+.footer-links a:hover{color:#ffd43b}
+.footer-social a{
+  font-size:22px;margin-right:15px;color:#eee;display:inline-block;
+  transition:transform .3s, color .3s
+}
+
+.footer-social a:hover{color:#ffd43b;transform:scale(1.2)}
+.footer-bottom{text-align:center;font-size:14px;color:#aaa}
+
+/* Responsive */
+@media (max-width: 768px){
+  nav ul{gap:15px}
+  .hero-title{font-size:36px}
+  .about-flex{flex-direction:column;text-align:center}
+  .contact-flex{flex-direction:column}
+}
+@media (max-width: 480px){
+  .logo img{height:40px}
+  .hero{padding:70px 15px}
+  .hero-title{font-size:28px}
+  .hero p{font-size:15px}
+}
+
+
+.about-offerbeez{
+  height:.99em;                      
+  flex:0 0 auto;
+  image-rendering:auto
+}
+.about-para{
+    color:black ;
+    font-weight: 500;
+}
+
